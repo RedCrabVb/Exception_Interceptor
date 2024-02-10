@@ -1,20 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Exception_Interceptor.Models;
+using Microsoft.AspNetCore.Mvc;
 using Npgsql;
 
 namespace Exception_Interceptor.Controller
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
         [HttpGet]
         [Route("make")]
+        //Русский текст
         public IActionResult MakeMessage(string msg)
         {
             if (msg == "ok")
             {
                 return Ok(msg);
-            } else
+            }
+            else
             {
                 throw new ArgumentException("Msg should be equal 'ok'");
             }
@@ -53,6 +56,14 @@ namespace Exception_Interceptor.Controller
         public IActionResult Get()
         {
             return Ok(new[] { "a", "b", "c" });
+        }
+
+
+        [HttpGet]
+        [Route("show")]
+        public void ShowModel([FromQuery] TableExample1 tableExample1)
+        {
+            Console.WriteLine(tableExample1);
         }
     }
 }
