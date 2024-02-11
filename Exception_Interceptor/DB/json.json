@@ -1,0 +1,34 @@
+[
+    {
+        "departmentDTO": {
+            "name": "int",
+            "managerName": "string"
+        },
+        "employees": [
+            {
+                "firstName": "string",
+                "lastName": "string"
+            },
+            {
+                "firstName": "int",
+                "lastName": "int"
+            }
+        ]
+    },
+    {
+        "departmentDTO": {
+            "name": "string 44444444",
+            "managerName": "string 55555"
+        },
+        "employees": [
+            {
+                "firstName": "stringa aaaaaaaaaa",
+                "lastName": "string"
+            },
+            {
+                "firstName": "int",
+                "lastName": "int bbbbb"
+            }
+        ]
+    }
+]
